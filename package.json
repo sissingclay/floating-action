@@ -1,0 +1,36 @@
+{
+  "name": "floating-action",
+  "version": "1.0.0",
+  "description": "This custom element will create a floating action button.",
+  "main": "./dist/floating-action.min.js",
+  "scripts": {
+    "build:js": "./node_modules/.bin/uglifyjs --compress --mangle -- src/floating-action.js > dist/floating-action.min.js && cp src/floating-action.js dist/floating-action.js",
+    "build:css": "./node_modules/.bin/cssnano < src/floating-action.css > dist/floating-action.min.css && cp src/floating-action.css dist/floating-action.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sissingclay/floating-action.git"
+  },
+  "keywords": [
+    "web",
+    "component",
+    "button",
+    "floating",
+    "menu",
+    "web-components"
+  ],
+  "author": "Clay Sissing <claysissing@gmail.com>",
+  "license": "",
+  "bugs": {
+    "url": "https://github.com/sissingclay/floating-action/issues"
+  },
+  "homepage": "https://github.com/sissingclay/floating-action#readme",
+  "devDependencies": {
+    "cssnano": "^3.7.3",
+    "cssnano-cli": "^1.0.4",
+    "express": "^4.13.4",
+    "local-web-server": "^1.2.4",
+    "uglify-js": "^2.6.2"
+  }
+}

@@ -1,0 +1,76 @@
+cs-floatingaction {
+    z-index: 999;
+    position: fixed;
+    bottom: 50px;
+    right: 30px;
+    transform: translate3d(0, 0, 0);
+    transition: bottom 300ms ease-in-out;
+}
+
+.c-floating--offbottom {
+    bottom: 100px;
+}
+
+cs-floatingaction:hover .c-floating__button,
+cs-floatingaction:target .c-floating__button,
+cs-floatingaction:focus .c-floating__button  {
+    background-color: #337AB7;
+    color: #fff;
+    transform: rotate(225deg);
+}
+.c-floating__button {
+    background-color: #2F618D;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    width: 60px;
+    height: 60px;
+    display: block;
+    margin: auto;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 22px;
+    position: relative;
+    margin-top: 10px;
+    transform: rotate(0);
+    transition: transform 300ms ease;
+    backface-visibility: hidden;
+    position: relative;
+}
+
+.c-floating__icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.c-floating__button:hover,
+.c-floating__button:target,
+.c-floating__button:focus {
+    color: #fff;
+}
+
+.c-floating__nav {
+    visibility: hidden;
+    opacity: 0;
+    max-height: 0;
+    transform: translate(0, -30px);
+    transition: max-height 400ms cubic-bezier(.32, 1.18, .88, 1.5), visibility 300ms cubic-bezier(.32, 1.18, .88, 1.5), transform 300ms ease-in-out, opacity 250ms cubic-bezier(.32, 1.18, .88, 1.5);
+    background-color: #fff;
+    border-radius: 5px;
+    border: 2px solid rgba(110, 110, 110, 0.7);
+}
+
+.c-floating__nav--show {
+    opacity: 1;
+    visibility: visible;
+    max-height: 500px;
+    transform: translate(0, 5px);
+}
+
+.c-floating__link {
+    display: block;
+    padding: 5px;
+    color: #2F618D;
+}

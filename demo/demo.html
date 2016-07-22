@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- This is to force IE to use the latest render engine it has -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta charset="UTF-8">
+    <title>Floating action</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+    <link href="../dist/floating-action.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        .material-icons.md-36 { font-size: 36px; }
+    </style>
+</head>
+<body style="height: 500px;">
+
+    <cs-floatingaction button=".c-floating__button" container=".c-floating__nav" toggle="c-floating__nav--show" move-container="c-floating--offbottom" to-bottom="10">
+
+        <nav class="c-floating__nav">
+            <a href="" class="c-floating__link">
+                <span class="glyphicon glyphicon-eye-open"></span> View reminders
+            </a>
+            <a href="" class="c-floating__link">
+                <span class="glyphicon glyphicon-calendar"></span> Create reminder
+            </a>
+        </nav>
+
+        <a href="" class="c-floating__button">
+            <i class="material-icons md-36 c-floating__icon">add</i>
+        </a>
+
+    </cs-floatingaction>
+
+    <!-- This is a polyfill for custom elements -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/document-register-element/0.5.4/document-register-element.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/2014.01.31/classList.min.js"></script>
+    <script src="../dist/floating-action.js"></script>
+
+</body>
+</html>
