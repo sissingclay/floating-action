@@ -1,10 +1,11 @@
 # Float action
 
-This is a web component that will clear value from an input field.
+This custom element will create a floating action button. When hover over the element it will reveal the hidden menu.
+This is a touch event on touch devices
 
 ## Demo
 
-[Demo](http://sissingclay.github.io/input-clearout/)
+[Demo](https://sissingclay.github.io/floating-action/)
 
 ## Install
 Install the component using NPM:
