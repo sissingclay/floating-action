@@ -15,7 +15,7 @@ csFA.setAttributes = function() {
     this.button = this.getAttribute('button');
     this.container = this.getAttribute('container');
     this.toggle = this.getAttribute('toggle');
-    this.moveContainer = this.getAttribute('move-container');
+    this.moveContainer = this.getAttribute('move-element');
     this.offSet = parseInt(this.getAttribute('to-bottom')) || 0;
 };
 
@@ -32,7 +32,7 @@ csFA.addEvents = function() {
     }
     
     if(this.isTouchDevice()) {
-        this.addEventListener('click', this.buttonAction.bind(this), false);
+        this.buttonElement.addEventListener('click', this.buttonAction.bind(this), false);
     }
 };
 
@@ -60,12 +60,18 @@ csFA.hasScrolled = function() {
 
 csFA.buttonAction = function(e) {
     
-    var conElement = this.containerElement,
-        isVisible = conElement.classList.contains(this.toggle);
+    e.preventDefault();
+    this.addRemoveClass();
     
     this.buttonElement.addEventListener('click', function(e) {
         e.preventDefault();
     }, false);
+};
+
+csFA.addRemoveClass = function () {
+    
+    var conElement = this.containerElement,
+        isVisible = conElement.classList.contains(this.toggle);
     
     if(!isVisible) {
         conElement.classList.add(this.toggle);

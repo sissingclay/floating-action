@@ -32,7 +32,7 @@ csFA.addEvents = function() {
     }
     
     if(this.isTouchDevice()) {
-        this.addEventListener('click', this.buttonAction.bind(this), false);
+        this.buttonElement.addEventListener('click', this.buttonAction.bind(this), false);
     }
 };
 
@@ -60,12 +60,18 @@ csFA.hasScrolled = function() {
 
 csFA.buttonAction = function(e) {
     
-    var conElement = this.containerElement,
-        isVisible = conElement.classList.contains(this.toggle);
+    e.preventDefault();
+    this.addRemoveClass();
     
     this.buttonElement.addEventListener('click', function(e) {
         e.preventDefault();
     }, false);
+};
+
+csFA.addRemoveClass = function () {
+    
+    var conElement = this.containerElement,
+        isVisible = conElement.classList.contains(this.toggle);
     
     if(!isVisible) {
         conElement.classList.add(this.toggle);

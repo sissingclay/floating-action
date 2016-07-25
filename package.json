@@ -1,6 +1,6 @@
 {
   "name": "floating-action",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This custom element will create a floating action button.",
   "main": "./dist/floating-action.min.js",
   "scripts": {
