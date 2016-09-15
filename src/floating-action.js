@@ -15,7 +15,7 @@ csFA.setAttributes = function() {
     this.button = this.getAttribute('button');
     this.container = this.getAttribute('container');
     this.toggle = this.getAttribute('toggle');
-    this.moveContainer = this.getAttribute('move-element');
+    this.moveContainer = this.getAttribute('move-container');
     this.offSet = parseInt(this.getAttribute('to-bottom')) || 0;
 };
 
