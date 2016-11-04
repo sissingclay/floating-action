@@ -11,7 +11,7 @@ This is a touch event on touch devices
 Install the component using NPM:
 
 ```
-$ npm i float-action --save
+$ npm install floating-action --save
 ```
 
 ## Dependencies
