@@ -1,11 +1,11 @@
 {
   "name": "floating-action",
-  "version": "1.0.3",
+  "version": "2.0.0",
   "description": "This custom element will create a floating action button.",
   "main": "./dist/floating-action.min.js",
   "scripts": {
-    "build:js": "./node_modules/.bin/uglifyjs --compress --mangle -- src/floating-action.js > dist/floating-action.min.js && cp src/floating-action.js dist/floating-action.js",
-    "build:css": "./node_modules/.bin/cssnano < src/floating-action.css > dist/floating-action.min.css && cp src/floating-action.css dist/floating-action.css",
+    "builds:js": "babel src/floating-action.js --out-file dist/floating-action.min.js --presets=es2015,babili && cp src/floating-action.js dist/floating-action.js",
+    "build:css": "cssnano < src/floating-action.css > dist/floating-action.min.css && cp src/floating-action.css dist/floating-action.css",
     "version": "git add -A .",
     "postversion": "git push && git push --tags"
   },
@@ -28,6 +28,10 @@
   },
   "homepage": "https://github.com/sissingclay/floating-action#readme",
   "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-cli": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babili": "^0.1.2",
     "cssnano": "^3.7.3",
     "cssnano-cli": "^1.0.4",
     "express": "^4.13.4",
